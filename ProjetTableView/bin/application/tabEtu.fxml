@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="fenetreAccueil" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerProjet">
+	<children>
+      <AnchorPane fx:id="fenetreAjout" layoutY="32.0" prefHeight="917.0" prefWidth="900.0" />
+      <AnchorPane fx:id="fenetreModif" prefHeight="956.0" prefWidth="900.0" />
+		<ScrollPane layoutY="30.0" prefHeight="900.0" prefWidth="900.0">
+			<content>
+				<TableView fx:id="tab" prefHeight="883.0" prefWidth="900.0">
+					<columns>
+						<TableColumn fx:id="nom" prefWidth="148.0" text="Nom" />
+						<TableColumn fx:id="prenom" prefWidth="196.0" text="Prenom" />
+						<TableColumn fx:id="dateNaissance" prefWidth="327.0" text="Date de naissance" />
+						<TableColumn fx:id="id" prefWidth="89.0" text="ID" />
+					</columns>
+				</TableView>
+			</content>
+		</ScrollPane>
+		<MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="900.0">
+			<menus>
+				<Menu fx:id="file" mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem fx:id="exit" mnemonicParsing="false" onAction="#getExit" text="Close" />
+					</items>
+				</Menu>
+				<Menu fx:id="etudiant" mnemonicParsing="false" text="Etudiant">
+					<items>
+						<MenuItem fx:id="ajouterEtu" mnemonicParsing="false" onAction="#getAjout" text="Ajouter Etudiant" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="listeEtu" mnemonicParsing="false" onAction="#getListe" text="Liste Etudiants" />
+					</items>
+				</Menu>
+				<Menu fx:id="aide" mnemonicParsing="false" text="Aide">
+					<items>
+						<MenuItem fx:id="iAide" mnemonicParsing="false" onAction="#getAide" text="Notice" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
+</AnchorPane>
